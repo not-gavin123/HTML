@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Game Website</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar-modified {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #222;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .navbar-modified a {
+      display: block;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar-modified a:hover {
+      background-color: #444;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    /* Adjusted title position */
+    h1 {
+      margin-top: 100px;
+      text-align: center;
+      color: #444;
+      font-size: 48px;
+    }
+
+    p {
+      text-align: center;
+      color: #777;
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar-modified" id="navbar">
+    <a href="#">About Us</a>
+    <a href="#">Homepage</a>
+    <a href="#">Our Games</a>
+    <a href="#">Suggest a Game</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="container">
+    <div class="menu-toggle" onclick="toggleNavbar()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+  </div>
+
+  <h1>Welcome to the Video Game Website</h1>
+  <p>Explore the latest games, read reviews, and get in touch with us!</p>
+
+  <script>
+    function toggleNavbar() {
+      var navbar = document.getElementById('navbar');
+      if (navbar.style.right === '0px') {
+        navbar.style.right = '-250px';
+      } else {
+        navbar.style.right = '0px';
+      }
+    }
+  </script>
+</body>
+</html>
